@@ -1,0 +1,46 @@
+public class Main {
+	public static void main(String[] args) {
+		int i = 0;
+		int j = 0;
+		// flex
+		int k;
+		int o;
+		int u;
+		int y;
+		// flex
+
+		int[][] mas = {
+				{ 1, 2, 3, 4, 5, 6 },
+				{ 1, 2, 3, 4, 5, 6 },
+				{ 1, 2, 3, 4, 5, 6 },
+				{ 1, 2, 3, 4, 5, 6 },
+				{ 1, 2, 3, 4, 5, 6 },
+				{ 1, 2, 3, 4, 5, 6 } };
+		for (int c = 0; c < 4; c++) {
+			for (int e = 0; e < mas.length; e++) {
+				for (int f = 0; f < mas[e].length; f++) {
+					System.out.print(mas[e][f]);
+				}
+				System.out.println();
+			}
+			System.out.println();
+
+			for (; i <= 2;) {
+				for (j = i; j < mas.length - i - 1; j++) {
+
+					k = mas[i][j];
+					o = mas[j][mas.length - i - 1];
+					u = mas[mas.length - i - 1][mas.length - j - 1];
+					y = mas[mas.length - j - 1][i];
+
+					mas[i][j] = y;
+					mas[j][mas.length - i - 1] = k;
+					mas[mas.length - i - 1][mas.length - j - 1] = o;
+					mas[mas.length - j - 1][i] = u;
+				}
+				i++;
+			}
+			i = 0;
+		}
+	}
+}
